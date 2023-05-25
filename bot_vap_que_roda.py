@@ -1,9 +1,5 @@
 import discord
-import os
-from dotenv import load_dotenv
 
-load_dotenv()
-token = os.getenv("token")
 class MyClient(discord.Client):
 
     async def on_ready(self):
@@ -32,4 +28,4 @@ intents = discord.Intents.all()
 intents.members = True
 
 client = MyClient(intents=intents)
-client.run(token)
+client.run('token')
